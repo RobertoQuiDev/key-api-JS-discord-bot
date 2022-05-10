@@ -57,10 +57,10 @@ try {
     const command=args.shift().toLowerCase()
     if(message.content.startsWith(config.bot.prefix + "add")){
       if(message.content.startsWith(config.bot.prefix)){if(!config.bot.owner.includes(message.author.id)) {return message.channel.send('Vous n\'avez pas la permission d\'utiliser cette commande.')}}
-      if (!args[0]) return message.reply('```' + config.bot.prefix + 'add  [Key] [DiscordID] [EndDate]("2022-01-25") [ServerIP] ``` missing key');
-      if (!args[1]) return message.reply('```' + config.bot.prefix + 'add  '+ args[0] +' [DiscordID] [EndDate]("2022-01-25") [ServerIP]``` missing discord');
-      if (!args[2]) return message.reply('```' + config.bot.prefix + 'add  ' + args[0] + ' ' + args[1] +' [DiscordID] [EndDate]("2022-01-25") [ServerIP]```missing date');
-      if (!args[3]) return message.reply('```' + config.bot.prefix + 'add  ' + args[0] + ' ' + args[1] +' '+  args[2] +' [ServerIP]```missing server ip');
+      if (!args[0]) return message.reply('```' + config.bot.prefix + 'addkey  [Key] [DiscordID] [EndDate]("2022-01-25") [ServerIP] ``` missing key');
+      if (!args[1]) return message.reply('```' + config.bot.prefix + 'addkey  '+ args[0] +' [DiscordID] [EndDate]("2022-01-25") [ServerIP]``` missing discord');
+      if (!args[2]) return message.reply('```' + config.bot.prefix + 'addkey  ' + args[0] + ' ' + args[1] +' [DiscordID] [EndDate]("2022-01-25") [ServerIP]```missing date');
+      if (!args[3]) return message.reply('```' + config.bot.prefix + 'addkey  ' + args[0] + ' ' + args[1] +' '+  args[2] +' [ServerIP]```missing server ip');
           let key = args[0];
           if(!db.keys[key]){db.keys[key] = []} 
           db.keys[key].push({
