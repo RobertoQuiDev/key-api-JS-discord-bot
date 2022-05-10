@@ -5,3 +5,13 @@ API en js qui check pour la clee de produit et l'ip du seveur si elle est wl (au
 ```
 http://ip:port/?key=[KEY]&luckwork=Roberto?8622
 ```
+
+```
+BOT
+```
+
+```
+!addkey  [Key] [DiscordID] [EndDate]("2022-01-25") [ServerIP] 
+!delkey [key]
+!keyinfo [key]
+```
