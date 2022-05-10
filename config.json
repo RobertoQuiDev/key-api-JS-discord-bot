@@ -1,7 +1,7 @@
 {
     "portweb":80,
     "bot":{
-        "discord": true,
+        "discord":false,
         "prefix":"!",
         "owner": [
             "540679592386494470",
@@ -12,7 +12,7 @@
             "ImageURL":"https://media.discordapp.net/attachments/972698344151453696/972702925585530930/unknown.png?width=473&height=468",
             "colors":"#0099ff"
         },
-        "token": "ODYyNTMyNzQyNjU3OTk4ODY4.YOZuNg.Zl561bXr2SIn3rt2ulwB-sjbTfo"
+        "token": ""
     },
     "Productname":"Sweet-AC",
     "websiteURL":"https://discord.gg/aaa",
