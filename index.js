@@ -98,6 +98,24 @@ try {
       let info = dsiahdjksnh[0];
       message.reply('```Server IP : '+ info.srvip +'\nKey End date : ' + info.time +'\nDay(s) Left : '+ getNumberOfDays(info.time) +'```Key Owner : <@'+ info.DiscordID +'>');
     }
+    
+        if(message.content.startsWith(config.bot.prefix + "ipreset")){
+      if(message.content.startsWith(config.bot.prefix)){if(!config.bot.owner.includes(message.author.id)) {return message.channel.send('Vous n\'avez pas la permission d\'utiliser cette commande.')}}
+      if (!args[0]) return message.reply('```' + config.bot.prefix + 'ipreset [Key] [NewIp]```');
+      if (!args[1]) return message.reply('```' + config.bot.prefix + 'ipreset ' + args[0] +' [NewIp]```');
+      let key = args[0];
+      try {
+      dsiahdjksnh = db.keys[key];
+      let info = dsiahdjksnh[0];
+      dsiahdjksnh[0].srvip = args[1];
+      fs.writeFileSync('./db.json', JSON.stringify(db))
+      message.reply('```New Server IP : '+ info.srvip +'```Key Owner : <@'+ info.DiscordID +'>`');
+    } catch (error) {
+      console.log('error key')
+      message.reply('```ERROR KEY```');
+    }
+    }
+    
     });
  client.login(config.bot.token);
  
