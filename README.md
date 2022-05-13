@@ -12,6 +12,7 @@ BOT
 
 ```
 !addkey  [Key] [DiscordID] [EndDate]("2022-01-25") [ServerIP] 
-!delkey [key]
-!keyinfo [key]
+!delkey [Key]
+!keyinfo [Key]
+!ipreset [Key] [NewIP]
 ```
